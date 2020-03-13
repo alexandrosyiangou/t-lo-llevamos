@@ -10,7 +10,7 @@ async function insertClient() {
     }
   } catch(error) {
     return {
-      message: 'Client Insert Failed'
+      error: 'Client Insert Failed'
     }
   }
 }
@@ -25,7 +25,7 @@ async function updateClient() {
     }
   } catch(error) {
     return {
-      message: 'Client Update Failed'
+      error: 'Client Update Failed'
     }
   }
 }
@@ -40,7 +40,7 @@ async function deleteClient() {
     }
   } catch(error) {
     return {
-      message: 'Client Delete Failed'
+      error: 'Client Delete Failed'
     }
   }
 }

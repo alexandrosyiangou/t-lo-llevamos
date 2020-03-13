@@ -10,7 +10,7 @@ async function insertMessages() {
     }
   } catch(error) {
     return {
-      message: 'Messages Insert Failed'
+      error: 'Messages Insert Failed'
     }
   }
 }
@@ -25,7 +25,7 @@ async function updateMessages() {
     }
   } catch(error) {
     return {
-      message: 'Messages Update Failed'
+      error: 'Messages Update Failed'
     }
   }
 }
@@ -40,7 +40,7 @@ async function deleteMessages() {
     }
   } catch(error) {
     return {
-      message: 'Messages Delete Failed'
+      error: 'Messages Delete Failed'
     }
   }
 }

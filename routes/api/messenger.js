@@ -4,22 +4,34 @@ const {insertMessenger, updateMessenger, deleteMessenger} = require('../../contr
 MessengerRouter.post('/insert', (req, res) => {
   const {body} = req;
   console.log(body)
-  // const response = await insertMessenger();
-  res.send('Insert Messenger Successful') 
+  const response = await insertMessenger();
+  if (response.message) {
+    res.send('Insert Messenger Successful')
+  } else if (response.error) {
+    res.send('Insert Messenger Failed')
+  }
 })
 
 MessengerRouter.patch('/update', (req, res) => {
   const {body} = req;
   console.log(body)
-  // const response = await updateMessenger();
-  res.send('Update Messenger Successful') 
+  const response = await updateMessenger();
+  if (response.message) {
+    res.send('Update Messenger Successful')
+  } else if (response.error) {
+    res.send('Update Messenger Failed')
+  }
 })
 
 MessengerRouter.delete('/delete', (req, res) => {
   const {body} = req;
   console.log(body)
-  // const response = await deleteMessenger();
-  res.send('Delete Messenger Successful') 
+  const response = await deleteMessenger();
+  if (response.message) {
+    res.send('Delete Messenger Successful')
+  } else if (response.error) {
+    res.send('Delete Messenger Failed')
+  }
 })
 
 MessengerRouter.get('/', (req, res) => res.send('Messenger Router'))
