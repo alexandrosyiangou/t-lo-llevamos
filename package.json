@@ -1,0 +1,23 @@
+{
+  "name": "t-lo-llevamos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexyiangou/t-lo-llevamos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexyiangou/t-lo-llevamos/issues"
+  },
+  "homepage": "https://github.com/alexyiangou/t-lo-llevamos#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.20.11"
+  }
+}
