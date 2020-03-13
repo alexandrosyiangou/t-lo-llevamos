@@ -1,7 +1,7 @@
 const morgan = require('morgan')
 const express = require('express')
 const bodyParser = require('body-parser')
-const ApiRouter = require('./routes/Api')
+const ApiRouter = require('./routes/api')
 
 const app = express()
 
