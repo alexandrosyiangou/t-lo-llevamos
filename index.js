@@ -1,6 +1,7 @@
 const morgan = require('morgan')
 const express = require('express')
 const bodyParser = require('body-parser')
+const ApiRouter = require('./routes/api')
 
 const app = express()
 
@@ -14,7 +15,9 @@ app.use(morgan('common'))
 
 app.use(bodyParser.json())
 
- app.get('/', (req, res) => res.send('Hello World!'))
+app.use('/api', ApiRouter)
+
+app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(port, () => {
   console.log(`Running server in ${process.env.NODE_ENV} mode`)
