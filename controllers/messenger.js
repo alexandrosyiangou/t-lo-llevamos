@@ -40,7 +40,7 @@ async function deleteMessages() {
     }
   } catch(error) {
     return {
-      error: 'Messages Delete Failed'
+      error : 'Messages Delete Failed'
     }
   }
 }
