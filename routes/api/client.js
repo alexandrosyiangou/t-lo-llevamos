@@ -1,5 +1,5 @@
 const ClientRouter = require('express').Router()
-const {insertClient} = require('../../controllers/client')
+const {insertClient, updateClient, deleteClient} = require('../../controllers/client')
 
 ClientRouter.post('/insert', (req, res) => {
   const {body} = req;

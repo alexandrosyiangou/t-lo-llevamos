@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "knex": "./node_modules/.bin/knex --knexfile ./knexfile.js",
+    "knex": "./node_modules/.bin/knex --knexfile ./knex/knexfile.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "knex": "^0.20.11",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "pg": "^7.18.2"
   }
 }

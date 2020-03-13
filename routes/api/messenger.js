@@ -1,4 +1,5 @@
 const MessengerRouter = require('express').Router()
+const {insertMessenger, updateMessenger, deleteMessenger} = require('../../controllers/messenger')
 
 MessengerRouter.post('/insert', (req, res) => {
   const {body} = req;
