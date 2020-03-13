@@ -1,9 +1,15 @@
 const knex = require('../knex')
 
-async function insertClient() {
+async function insertClient(name, email, address, phoneNumber, directionMap, valueOfServices, assignedMessages) {
   try {
-    await knex('Client').insert({
-
+    await knex('clients').insert({
+      name: name,
+      email: email,
+      address: address,
+      phoneNumber: phoneNumber,
+      directionMap: directionMap,
+      valueOfServices: valueOfServices,
+      assignedMessages: assignedMessages,
     })
     return {
       message: 'Client Insert Successful'
@@ -15,10 +21,10 @@ async function insertClient() {
   }
 }
 
-async function updateClient() {
+async function updateClient(params) {
   try {
-    await knex('Client').update({
-
+    await knex('clients').update({
+      ...params
     })
     return {
       message: 'Client Update Successful'
@@ -30,10 +36,10 @@ async function updateClient() {
   }
 }
 
-async function deleteClient() {
+async function deleteClient(id) {
   try {
     await knex('Client').delete({
-
+      id: id,
     })
     return {
       message: 'Client Delete Successful'
