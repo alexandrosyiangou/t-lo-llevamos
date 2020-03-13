@@ -18,6 +18,7 @@
   "homepage": "https://github.com/alexyiangou/t-lo-llevamos#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "knex": "^0.20.11"
+    "knex": "^0.20.11",
+    "morgan": "^1.9.1"
   }
 }
