@@ -1,7 +1,7 @@
 const MessengerRouter = require('express').Router()
 const {insertMessenger, updateMessenger, deleteMessenger} = require('../../controllers/messenger')
 
-MessengerRouter.post('/insert', (req, res) => {
+MessengerRouter.post('/insert', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await insertMessenger();
@@ -12,7 +12,7 @@ MessengerRouter.post('/insert', (req, res) => {
   }
 })
 
-MessengerRouter.patch('/update', (req, res) => {
+MessengerRouter.patch('/update', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await updateMessenger();
@@ -23,7 +23,7 @@ MessengerRouter.patch('/update', (req, res) => {
   }
 })
 
-MessengerRouter.delete('/delete', (req, res) => {
+MessengerRouter.delete('/delete', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await deleteMessenger();

@@ -1,7 +1,7 @@
 const ClientRouter = require('express').Router()
 const {insertClient, updateClient, deleteClient} = require('../../controllers/client')
 
-ClientRouter.post('/insert', (req, res) => {
+ClientRouter.post('/insert', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await insertClient();
@@ -12,7 +12,7 @@ ClientRouter.post('/insert', (req, res) => {
   }
 })
 
-ClientRouter.patch('/update', (req, res) => {
+ClientRouter.patch('/update', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await updateClient();
@@ -23,7 +23,7 @@ ClientRouter.patch('/update', (req, res) => {
   }
 })
 
-ClientRouter.delete('/delete', (req, res) => {
+ClientRouter.delete('/delete', async (req, res) => {
   const {body} = req;
   console.log(body)
   const response = await deleteClient();
